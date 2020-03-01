@@ -1,4 +1,5 @@
 let numberRandom = [];
+let rate = 10;
 
 function Rnd(min,max,length)
 {
@@ -27,6 +28,7 @@ function isEmpty(str) {
 
 function Make() {
 
+    if (rate > 0) {
     if (isEmpty(document.getElementById('inp_2').value))
         alert('Введите свое число!'); 
     let numberUser = (String(document.getElementById('inp_2').value)).split('');
@@ -54,14 +56,20 @@ function Make() {
             arrCows.push(numberUser[i]);
         }
     }
-    
+   
+    --rate;
     if (countBulls == numberRandom.length) 
-        document.getElementById("output").innerHTML = 'Вы выиграли! Загаданное компьютером число равно ' + document.getElementById('inp_2').value;        
+        document.getElementById("output").innerHTML = 'Вы выиграли! Загаданное компьютером число равно ' + document.getElementById('inp_2').value + '.'; 
+    else if(rate == 0)
+        document.getElementById("rate").innerHTML = 'У Вас закончились все попытки. Начните новую игру и Вам обязательно повезет!'; 
     else
         document.getElementById("output").innerHTML = 'Ответ: совпадение цифр не на своих местах - ' + countCows + ' (' + arrCows + '), ' + 'цифр на своих местах - ' + countBulls + ' (' + arrBulls + ').';
+        document.getElementById("rate").innerHTML = 'У Вас осталось ' + rate + ' попыток!'; 
+}    
 }
 
 function NewGame() {
     numberRandom.length = 0;
+    rate = 10;
     alert('Все готово к новой игре!');
 } 
