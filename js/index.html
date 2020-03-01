@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bulls and Cows</title>
+</head>
+<body>
+
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">Ваш браузер <strong>устарел</strong>. Пожалуйста,  <a href="http://browsehappy.com/">обновите его</a>, чтобы получить наилучший опыт .</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+ <h1>Правила игры "Быки и коровы"</h1>
+ <h3><p>Компьютер загадывает число из нескольких различающихся цифр (от 3 до 6). Игроку дается несколько попыток на то, чтобы угадать это число.
+ После каждой попытки компютер сообщает количество совпавших цифр стоящих не на своих местах, а также количество правильных цифр на своих местах.
+ После каждой попытки компютер сообщает количество совпавших цифр стоящих не на своих местах, а также количество правильных цифр на своих местах.</p></h3>
+ <h3><p>Например, загаданное число: 56478, а предложение игрока: 52976.</p></h3>
+ <h3><p>Ответ: совпадение цифр не на своих местах - 1 (6), цифр на своих местах - 2 (5 и 7).</p></h3>
+<h3><p>Игра ведется до окончания количества ходов либо до отгадывания.</p></h3>  
+
+  <div class="startGame">
+    <h3>Игра</h3>
+    <label for="inp_1">Выберите длину числа:</label>
+      <select name="menu" size="1" id="inp_1">
+        <option selected="selected" value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    <label for="inp_2">Введите свое число:</label>
+      <input type="text" class="form-control" id="inp_2">
+  </div>
+  <div><h3></h3><input type="button" onclick="Make()" value="Поехали!" id="startButton" class="btn"></h3></div>
+  <div><h3></h3><input type="button" onclick="NewGame()" value="Новая игра!" id="startButton" class="btn"></h3></div>
+  
+<div id="number"></div>
+<script src="js/main.js"></script>
+</body>
+</body>
+</html>
