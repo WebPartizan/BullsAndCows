@@ -56,9 +56,9 @@ function Make() {
     }
     
     if (countBulls == numberRandom.length) 
-        document.getElementById("number").innerHTML = 'Вы выиграли! Загаданное компьютером число равно ' + document.getElementById('inp_2').value;        
+        document.getElementById("output").innerHTML = 'Вы выиграли! Загаданное компьютером число равно ' + document.getElementById('inp_2').value;        
     else
-        document.getElementById("number").innerHTML = 'Ответ: совпадение цифр не на своих местах - ' + countCows + ' (' + arrCows + '), ' + 'цифр на своих местах - ' + countBulls + ' (' + arrBulls + ').';
+        document.getElementById("output").innerHTML = 'Ответ: совпадение цифр не на своих местах - ' + countCows + ' (' + arrCows + '), ' + 'цифр на своих местах - ' + countBulls + ' (' + arrBulls + ').';
 }
 
 function NewGame() {
